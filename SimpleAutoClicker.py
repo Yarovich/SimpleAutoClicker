@@ -12,8 +12,8 @@ def on_press():
     print(stop)
 
 
-keyboard.add_hotkey('f6', on_press)
+keyboard.add_hotkey('f6', on_press)  # < горячая клавиша для вкл/выкл кликера
 while True:
     if stop:
-        mouse.click(Button.left, 1)
-    time.sleep(0.001)
+        mouse.click(Button.left, 1)  # < Button.left / Button.right / Button.middle
+    time.sleep(0.001)  # < задержка между кликами
