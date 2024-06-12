@@ -3,7 +3,7 @@ from keyboard import add_hotkey
 from time import sleep
 
 
-stop = False
+stop = True
 mouse = Controller()
 
 
@@ -15,6 +15,6 @@ def on_press():
 
 add_hotkey('f6', on_press)  # < горячая клавиша для вкл/выкл кликера
 while True:
-    if stop:
+    if not stop:
         mouse.click(Button.left, 1)  # < Button.left / Button.right / Button.middle
-    sleep(0.001)  # < задержка между кликами
+        sleep(0.001)  # < задержка между кликами
